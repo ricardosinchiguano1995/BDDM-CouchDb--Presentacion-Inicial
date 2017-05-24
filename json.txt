@@ -1,0 +1,96 @@
+{
+  "_id": "fa7c5795ee78e630835796cc3d0006df",
+  "Marca":"Mazda",
+  "Matricula":"ABC-78",
+  "Dueño":"Ricardo",
+  "Estado":"Bueno",
+  "Recorrido KM":500,
+}
+
+{
+  "_id": "fa7c5795ee78e630835796cc3d004662",
+  "Marca":"Mazda",
+  "Matricula":"PHP-87",
+  "Dueño":"Juan",
+  "Estado":"Malo",
+  "Recorrido KM":214
+}
+{
+  "_id": "fa7c5795ee78e630835796cc3d005f49",
+  "Marca":"Nissan",
+  "Matricula":"PHP-87",
+  "Dueño":"Maria",
+  "Estado":"Medio",
+  "Pais Origen":"Estados Unidos",
+  "Recorrido KM":214
+}
+{
+  "_id": "fa7c5795ee78e630835796cc3d007826",
+  "Marca":"Ford",
+  "Matricula":"IPT-87A",
+  "Dueño":"Pablo",
+  "Estado":"Bueno",
+  "Pais Origen":"Alemania",
+  "Recorrido KM":5201
+}
+
+{
+  "_id": "fa7c5795ee78e630835796cc3d008f74",
+  "_rev": "1-b66094b04e57bf796d06d998f03af940",
+  "Marca": "Nissan",
+  "Matricula": "EPT-87A",
+  "Dueño": "Mary",
+  "Estado": "Malo",
+  "Pais Origen": "Mexico",
+  "Cilindraje": 4,
+  "Recorrido KM": 8744
+}
+
+
+
+
+setencia1
+//contar cuantos carros tiene marca count
+function(carro){
+  if(carro.Marca){
+    emit(carro.Marca);
+  }
+  
+}
+
+setencia2
+//listar los carros que estan en buen estado sum
+function(carro){
+ 
+var recorridoR="Bueno";
+ if(carro.Estado==recorridoR){
+
+    emit(carro.Estado,1);
+
+  }
+ 
+ 
+}
+
+setencia3
+
+//cuantos carros tiene Ricardo  (_coun)
+function(carro){
+
+var nombre="Ricardo";
+ 
+if (carro.Dueño){
+	for(var propietario in carro.Dueño){
+		if (carro.Dueño.indexOf(nombre)> -1){
+			emit(nombre,1);
+
+ 
+}
+
+ 
+}
+ 
+}
+ 
+}
+
