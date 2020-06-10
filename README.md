@@ -1,2 +1,2 @@
-# BasesMulti-Deber
-Deber de base de datos con apache causch db
+# BasesMultidimencionales
+Base de datos con Apache Couch Db
